@@ -1,7 +1,6 @@
 require_relative 'boot'
 
 require "rails"
-# Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
@@ -30,17 +29,3 @@ module RailsDemo
     end
   end
 end
-
-=begin
-class Application < Rails::Application
-  config.generators do |generate|
-    generate.helper false
-    generate.assets false
-    generate.view_specs false
-    generate.helper_specs false
-    generate.routing_specs false
-    generate.controller_specs false
-    generate.system_tests false
-  end
-end
-=end
