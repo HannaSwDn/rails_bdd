@@ -12,4 +12,3 @@ Feature: Edit articles
         And I fill in 'article_content' with 'Some really really breaking action'
         And I click 'Update Article'
         Then I should see 'Some really really breaking action'
-        Then show me the page
