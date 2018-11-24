@@ -1,6 +1,6 @@
 <nav>
-    <h1 id="header">articles:</h1>
-    <a href="/articles">Create an article</a>
+    <h1 id='header'>articles:</h1>
+    <a href='/articles'>Create an article</a>
 </nav>
 
 <table>
@@ -10,13 +10,13 @@
     </tr>
     <% @articles.each do |article| %>
         <tr>
-            <td class="article_title"><%= article.title %></td>
-            <td class="article_title"><%= article.content %></td>
+            <td class='article_title'><%= article.title %></td>
+            <td class='article_title'><%= article.content %></td>
 
-            <td class="article_option"><%= link_to 'Edit', edit_article_path(article) %></td>
-            <td class="article_option"><%= link_to 'Show', article_path(article) %></td>
-            <td class="article_option"><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure you want to delete this article?"} %></td>
-            <td class="article_option"><%= link_to 'Comment', edit_article_path(article) %></td>
+            <td class='article_option'><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td class='article_option'><%= link_to 'Show', article_path(article) %></td>
+            <td class='article_option'><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure you want to delete this article?'} %></td>
+            <td class='article_option'><%= link_to 'Comment', edit_article_path(article) %></td>
         </tr>
     <% end %>
 </table>
