@@ -7,7 +7,6 @@ class ArticlesController < ApplicationController
     # render plain: params[:article].inspect
     @article = Article.new(article_params)
     @article.save
-    redirect_to welcome_index_path
   end
 
   def index
@@ -21,9 +20,9 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
+    redirect_to welcome_index_path
     if @article.update(article_params)
       flash[:notice] = "Article was updated"
-      redirect_to article_path(@article)
     else
       flash[:notice] = "Article was not updated"
       render 'edit'
