@@ -1,12 +1,4 @@
-<%= link_to 'welcome', welcome_index_path %>
-
-<% flash.each do |name, msg| %>
-    <ul>
-        <li><%= msg %></li>
-    </ul>
-<% end %>
-
-<h2>Create an article:</h2>
+<h1>Edit article:</h1>
 
 <%= form_for @article do |article| %>
     <p>
@@ -23,4 +15,3 @@
         <%= article.submit %>
     </p>
 <% end %>
-
