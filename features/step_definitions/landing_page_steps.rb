@@ -17,19 +17,15 @@ Given('I visit the {string} page') do |string|
 end
 
 When('I click {string} link') do |string|
-
+    click_link string
 end
 
-When('I fill in {string} with {string}') do |string, string2|
-
+When('I fill in {string} with {string}') do |input, content|
+    fill_in input, with: content
 end
 
-When('I click {string} button') do |button|
-    click_button button
-end
-
-Then('I should be on {string} page') do |string|
-
+When('I click {string}') do |x|
+    click_on x
 end
 
 Then('show me the page') do
