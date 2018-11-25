@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
     # render plain: params[:article].inspect
     @article = Article.new(article_params)
     @article.save
+    redirect_to welcome_index_path
   end
 
   def index
@@ -40,12 +41,11 @@ class ArticlesController < ApplicationController
   end
 
   def comment
-    @article[:comment] = Article.find(params[:id])
     @article.save
   end
 
   private
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content, :comment)
     end
 end
