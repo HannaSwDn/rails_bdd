@@ -40,10 +40,6 @@ class ArticlesController < ApplicationController
     redirect_to welcome_index_path
   end
 
-  def comment
-    @article.save
-  end
-
   private
     def article_params
       params.require(:article).permit(:title, :content, :comment)
