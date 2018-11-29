@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2018_11_25_192241) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "comments", force: :cascade do |t|
