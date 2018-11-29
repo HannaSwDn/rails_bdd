@@ -9,4 +9,3 @@ Feature: Delete articles
             | A breaking news item | Some really breaking action |
         And I visit the site
         And I click 'Delete'
-        And I click 'OK'
